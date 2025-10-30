@@ -1,0 +1,268 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Supercar Showcase</title>
+    <link href="bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(to right, #0f0f0f, #1c1c1c);
+            color: #f1f1f1;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        .accordion-button {
+            background-color: #212529;
+            color: #f8f9fa;
+        }
+
+        .accordion-button:not(.collapsed) {
+            background-color: #343a40 !important;
+            color: #f8f9fa !important;
+            box-shadow: none;
+        }
+
+        .accordion-button::after {
+            filter: brightness(5);
+
+        }
+
+        .card {
+            background-color: #2c2c2c;
+            border: none;
+            color: #fff;
+        }
+
+        .table {
+            color: #fff;
+        }
+
+        .table th {
+            background-color: #a8cbef;
+        }
+
+        .btn-custom {
+            background-color: #ff4c4c;
+            border: none;
+        }
+
+        .btn-custom:hover {
+            background-color: #ff1a1a;
+        }
+
+        .alert-custom {
+            background-color: #0d6efd;
+            color: #fff;
+        }
+
+
+        .flip-container {
+            perspective: 1000px;
+        }
+
+        .flipper {
+            position: relative;
+            width: 100%;
+            height: 250px;
+            transform-style: preserve-3d;
+            transition: transform 0.6s;
+        }
+
+        .flip-container:hover .flipper {
+            transform: rotateY(180deg);
+        }
+
+        .front,
+        .back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            top: 0;
+            left: 0;
+        }
+
+        .front img,
+        .back img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 0.375rem 0.375rem 0 0;
+        }
+
+        .back {
+            transform: rotateY(180deg);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container py-5">
+        <h1 class="text-center mb-4">🚗 Supercar Showcase</h1>
+        <div class="accordion" id="carAccordion">
+
+           
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingOne">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseOne">
+                        Card Overview
+                    </button>
+
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#carAccordion">
+                    <div class="accordion-body">
+                        <div class="row g-4">
+                          
+                            <div class="col-md-6">
+                                <div class="card h-100">
+                                    <div class="flip-container">
+                                        <div class="flipper">
+                                            <div class="front">
+                                                <img src="bmw-m5.jpg" class="card-img-top" alt="BMW M5">
+                                            </div>
+                                            <div class="back">
+                                                <img src="bmw-m5-back.avif" class="card-img-top"
+                                                    alt="BMW M5 Rear View">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card-body">
+                                        <h5 class="card-title">BMW M5 CS</h5>
+                                        <p class="card-text">The M5 CS is the most powerful BMW ever made, boasting 627
+                                            hp and a 0-100 km/h time of just 3.0 seconds. It's a luxury sedan with the
+                                            heart of a race car.</p>
+                                        <a href="#" target="_blank" class="btn btn-custom">Explore
+                                            More</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                           
+                            <div class="col-md-6">
+                                <div class="card h-100">
+                                    <div class="flip-container">
+                                        <div class="flipper">
+                                            <div class="front">
+                                                <img src="dodge-hellcat.jpg" class="card-img-top"
+                                                    alt="Dodge Challenger">
+                                            </div>
+                                            <div class="back">
+                                                <img src="dodge-hellcat-back.jpg" class="card-img-top"
+                                                    alt="Dodge Challenger Rear View">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card-body">
+                                        <h5 class="card-title">Dodge Challenger SRT Hellcat</h5>
+                                        <p class="card-text">The Challenger Hellcat is a brute-force icon with up to 797
+                                            hp and a roaring supercharged V8. It's unapologetically American and built
+                                            for straight-line domination.</p>
+                                        <a href="#" target="_blank" class="btn btn-custom">Discover Dodge</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingTwo">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseTwo">
+                        News & Alerts
+                    </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#carAccordion">
+                    <div class="accordion-body">
+                        <div class="alert alert-custom" role="alert">
+                            🔥 Lamborghini Revuelto is here! The first V12 plug-in hybrid supercar with 1001 hp.
+                        </div>
+                        <div class="alert alert-warning" role="alert">
+                            ⚠️ Limited production—only 500 units worldwide. Reserve yours now!
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+           
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingThree">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseThree">
+                        Buttons & Options
+                    </button>
+                </h2>
+                <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#carAccordion">
+                    <div class="accordion-body text-center">
+                        <h5>Choose Your McLaren Experience</h5>
+                        <button class="btn btn-custom m-2">720S Coupe</button>
+                        <button class="btn btn-custom m-2">Artura Hybrid</button>
+                        <button class="btn btn-custom m-2">Track Mode</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Specs Comparison Table Section -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingFour">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseFour">
+                        Specs Comparison Table
+                    </button>
+                </h2>
+                <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#carAccordion">
+                    <div class="accordion-body">
+                        <div class="table-responsive">
+                            <table class="table table-bordered text-center custom-table">
+                                <thead>
+                                    <tr>
+                                        <th class="bg-gradient">🚗 Model</th>
+                                        <th class="bg-gradient">⚡ Horsepower</th>
+                                        <th class="bg-gradient">🏁 0–100 km/h</th>
+                                        <th class="bg-gradient">🚀 Top Speed</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>BMW M5 CS</td>
+                                        <td>627 hp</td>
+                                        <td>3.0 sec</td>
+                                        <td>305 km/h</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Lamborghini Revuelto</td>
+                                        <td>1001 hp</td>
+                                        <td>2.5 sec</td>
+                                        <td>350 km/h</td>
+                                    </tr>
+                                    <tr>
+                                        <td>McLaren 720S</td>
+                                        <td>710 hp</td>
+                                        <td>2.9 sec</td>
+                                        <td>341 km/h</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Dodge Challenger Hellcat</td>
+                                        <td>797 hp</td>
+                                        <td>3.6 sec</td>
+                                        <td>326 km/h</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
